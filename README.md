@@ -106,15 +106,10 @@ TopTier is a mobile app built with Flutter that helps users explore and compare 
 Originally developed as a practice project, it evolved into a well-structured reference tool integrating curated data and Firestore-backed content.
 
 ***✨ Core Features***
-
 - Character Browser — view hero rankings and key stats.
-
 - Gear Recommendations — quick reference for optimal builds.
-
 - Favorites System — mark and track preferred characters.
-
 - Cloud Integration — Firestore-backed dataset with restricted access for testing.
-
 - Modular Widgets — cleanly separated UI components and providers.
 
 
@@ -134,25 +129,27 @@ TopTier was designed to help me deepen my understanding of state management, mod
 
 I implemented:
 
-A reusable FavoritesProvider class to manage in-memory user preferences.
+- A reusable `FavoritesProvider` class to manage in-memory user preferences.
 
-A tier-list browsing system with character cards and detail modals.
+- A tier-list browsing system with character cards and detail modals.
 
-Firestore integration with environment variable–based credentials for secure reads.
+- Firestore integration with environment variable–based credentials for secure reads.
 
-Error handling, responsive layouts, and incremental UI updates using ChangeNotifier.
+- Error handling, responsive layouts, and incremental UI updates using ChangeNotifier.
 
 Through this project, I learned how to structure production-style Flutter apps, manage multiple environments, and prototype fast with Firebase integrations.
 
 ***🧭 Challenges & Takeaways***
 
-Managing Firestore security rules without exposing data publicly.
+- Managing Firestore security rules without exposing data publicly.
 
-Handling async state updates in complex widget trees.
+- Handling async state updates in complex widget trees.
 
-Creating a maintainable UI pattern that could scale if persisted data was added later.
+- Creating a maintainable UI pattern that could scale if persisted data was added later.
 
-“TopTier taught me how to write clean, modular Flutter code — and how to think about scalability even in small, experimental apps.”
+- Implemented a system to streamline database updates by automating JSON data integration, reducing manual input when adding new characters.
+
+TopTier taught me how to write and the importance of clean, modular Flutter code, and how to think about scalability even in small, experimental apps.
 
 ***📱 Visual Preview***
 
@@ -165,24 +162,169 @@ It’s an ongoing experiment that combines UI design, data modeling, and mobile 
 
 ***🔗 Links***
 
-Repository: [TopTier2 GitHub](https://github.com/Court247/TopTier2)
+Repository: [TopTier GitHub](https://github.com/Court247/TopTier2)
 
 Contact: courtney.woodsjobs@gmail.com
 
-### [Lightweight Intrusion Detection System](https://github.com/ChristianAlbertoGomez/CS4311_LIDS_4CodOfDuty_Fall2023)
+### 🛡️ Lightweight Intrusion Detection System
+
+***Overview:***
+
+The Lightweight Intrusion Detection System (LIDS) was developed for the DEVCOM Analysis Center (DAC) to assist cyber analysts in performing Cyber Vulnerability Assessments (CVAs).
+The project’s goal was to design a resource-efficient intrusion detection system capable of identifying and reporting malicious network activity without the heavy overhead of traditional IDS tools.
+
+Unlike typical enterprise IDS solutions, LIDS minimizes dependencies and CPU load, making it suitable for lightweight deployments and constrained environments.
+
+***System Architecture***
+
+LIDS is composed of three integrated subsystems (agents) that collectively monitor, analyze, and report malicious network behavior:
+
+| Agent                               | Description                                                                                                                                                |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **LIDS Agent**                      | Local detection unit that monitors network packets on an analyst’s machine, detects intrusions, stores logs, and forwards alerts to the distributed agent. |
+| **Lightweight Network IDS (LNIDS)** | Network-level agent that monitors traffic on a SPAN port, stores packets, and relays alerts to LIDS-D.                                                     |
+| **LIDS-D (Distributed Agent)**      | Central aggregation server that receives alerts from multiple agents, stores data, and provides analysts with visualization and review capabilities.       |
+
+Together, these agents form a distributed lightweight IDS framework that supports both CLI and GUI interfaces for flexibility in deployment.
+
+***Core Features***
+
+- Real-time detection of malicious network interactions
+- Multi-agent communication between LIDS, LNIDS, and LIDS-D
+- Low resource consumption and minimal dependencies
+- Local and remote data storage for alerts and packet logs
+- Dual interfaces — Command Line (CLI) and Graphical (GUI)
+- Configurable whitelist system for safe-listed IPs and nodes
+- Analyst dashboard for viewing network activity, alerts, and known vs. unknown devices
+
+***Tech Stack***
+
+| Layer                        | Technology                       |
+| ---------------------------- | -------------------------------- |
+| **Backend / Logic**          | Python 3.10                      |
+| **Web Framework**            | Flask 2.0                        |
+| **Frontend GUI**             | React 18                         |
+| **Network Tools**            | Scapy · PyShark · Netifaces      |
+| **Security & Parsing**       | Cryptography · DefusedXML        |
+| **Visualization**            | Tabulate · JSON/XML parsing      |
+| **Virtualization / Testing** | Docker · VMware · Linux Lite 6.6 |
+
+
+***My Role & Contributions***
+
+As part of Team #4: Code of Duty, my focus areas included:
+- Developing Python modules for packet capture, parsing, and alert generation
+- Implementing communication logic between LIDS agents and the LIDS-D distributed node
+- Assisting in GUI component development and alert visualization using React and Flask
+- Collaborating on Docker-based test environments to simulate multi-node networks
+- Documenting installation, testing, and troubleshooting for deployment in lab environments
+
+***Development & Testing***
+
+- Implemented Docker-based network simulations to emulate analyst, attacker, and server nodes.
+- Used Wireshark-compatible packet captures for validation via PyShark and Scapy.
+- Validated detection accuracy under constrained resources to meet “lightweight” requirements.
+
+***Challenges & Solutions***
+
+| Challenge                                             | Solution                                                                |
+| ----------------------------------------------------- | ----------------------------------------------------------------------- |
+| Reducing processing overhead during packet inspection | Optimized Scapy and PyShark packet parsing with multithreading          |
+| Secure inter-agent communication                      | Implemented encrypted socket channels via the `cryptography` module     |
+| Visualizing multi-agent data in real time             | Built a React-based dashboard integrated with Flask for alert streaming |
+
+***GUI Overview***
+
+- ***Dashboard:*** Displays alerts by level, time, IP, port, and description
+- ***Network Map:*** Shows known and unknown devices in real time
+- ***Alerts View:*** Lists triggered detections and network anomalies
+- ***Settings Page:*** Configures connections and restarts agents on update
+
+***Outcome***
+
+LIDS provides a functional proof-of-concept for a distributed, lightweight IDS that can detect malicious traffic across nodes with minimal resource consumption.
+The project demonstrated my ability to work in a multi-disciplinary cybersecurity environment, integrating networking, software engineering, and visualization — while effectively collaborating and communicating within a diverse development team.
+
+***Project Details***
+- ***Team:*** Code of Duty (8 members)
+- ***Role:*** Developer / Network Logic Contributor
+- ***Client:*** DEVCOM Analysis Center (DAC)
+- ***Tools:*** Python · Flask · React · Docker · VMware · Linux Lite
+- ***Date:*** November 2023
+- ***Link:*** [Lightweight Intrusion Detection System (Private Repo)](https://github.com/ChristianAlbertoGomez/CS4311_LIDS_4CodOfDuty_Fall2023)
 
 ### [Flavor App](https://github.com/cmalcazar/FlavorApp)
 
 ## 🧰 Skills & Tools
-![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/-FastAPI-009688?logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black)
-![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?logo=firebase&logoColor=black)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)
+***Languages***
 
-## Currently Learning
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+
+***Frameworks & Libraries***
+
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+
+***Databases & Backend Tools***
+
+![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![Firestore](https://img.shields.io/badge/Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![REST_API](https://img.shields.io/badge/REST_API-02569B?style=for-the-badge&logo=fastapi&logoColor=white)
+
+***Dev Tools & Environments***
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![VMware](https://img.shields.io/badge/VMware-607078?style=for-the-badge&logo=vmware&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
+***Security & Networking***
+
+![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white)
+![PyShark](https://img.shields.io/badge/PyShark-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Scapy](https://img.shields.io/badge/Scapy-FFCC00?style=for-the-badge&logo=python&logoColor=black)
+![Cryptography](https://img.shields.io/badge/Cryptography-4B8BBE?style=for-the-badge&logo=python&logoColor=white)
+![Network_Security](https://img.shields.io/badge/Network_Security-006400?style=for-the-badge&logo=databricks&logoColor=white)
+
+***Design & Frontend Tools***
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+***Testing & Development***
+
+![Unit Testing](https://img.shields.io/badge/Unit_Testing-6DB33F?style=for-the-badge&logo=junit5&logoColor=white)
+![CI/CD](https://img.shields.io/badge/CI/CD-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![Testing](https://img.shields.io/badge/Testing-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+## 🌱 Currently Learning
+
+- ***FastAPI*** for building modern, high-performance backend applications
+
+- ***RESTful API*** design and integration across multiple services
+
+- ***Spring Boot*** for scalable enterprise-level backend development
+
+- ***API creation and routing*** within FastAPI and Spring Boot frameworks
+
+- ***Connecting React frontends*** to backend APIs and routers for full-stack communication
 
 ## About Me
 
@@ -190,4 +332,7 @@ I am a full stack software engineer. Recently graduated with my degree in Comput
 
 I'm passionate about creating scalable web apps and mobile applications. 
 
-## Contact
+## Connect with me
+- [💼 LinkedIn](https://linkedin.com/in/yourprofile)  
+- [📧 Email](mailto:youremail@example.com)  
+- [🌐 Portfolio (coming soon)](https://yourusername.github.io)
