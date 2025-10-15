@@ -9,7 +9,6 @@ Full stack developer passionate about art, gaming, design, and scalable applicat
     - [Bank Web App](#banking-web-app)
     - [TopTier](#toptier)
     - [Lightweight Intrusion Detection System](#lightweight-intrusion-detection-system)
-    - [Flavor App](#flavor-app)
 2. 🧰 [Skills & Tools](#skills)
 3. 🌱 [Currently Learning]()
 4. 💬 [About Me](#about-me)
@@ -97,7 +96,92 @@ Repository: [ArtBook GitHub](https://github.com/Court247/ArtBook)
 Tech Docs: README.md
 
 
-### [Banking Web App](https://github.com/Court247/BankWebApp)
+### 🏦 Banking Web App
+
+***Overview***
+
+The Bank Web App is a full-stack financial management platform built with React and Spring Boot as a monorepo.
+Its goal is to simulate essential banking operations such as account creation, user authentication, and transaction management, while demonstrating a clean separation between frontend (React) and backend (Spring Boot) architectures.
+
+Currently in early development, this project serves as a foundation for secure, scalable financial web systems, focusing on RESTful design, modular structure, and seamless client-server communication.
+
+***Core Features (Planned & Implemented)***
+- User Interface (React):
+Responsive frontend built with React and TypeScript, providing form handling and component-based views.
+
+- RESTful API (Spring Boot):
+A backend service that handles requests from the frontend, processes data, and returns responses via REST endpoints.
+
+- Authentication System (Planned):
+Secure login and account creation using JWT or Spring Security.
+
+- Account Management (Planned):
+View balances, track transactions, and simulate deposits or withdrawals.
+
+- Data Persistence (Planned):
+Integration with a relational database (MySQL or PostgreSQL) through Spring JPA.
+
+***Tech Stack***
+| Layer                  | Technology                              |
+| ---------------------- | --------------------------------------- |
+| **Frontend**           | React · TypeScript · Node.js · HTML/CSS |
+| **Backend**            | Spring Boot · Java · Maven              |
+| **Build Tools**        | npm · Maven                             |
+| **Architecture**       | REST API · MVC                          |
+| **Database (Planned)** | MySQL or PostgreSQL                     |
+
+***My Role & Focus***
+
+This project is an independent build where I am responsible for designing both the client and server layers, including:
+
+- Structuring a modular React frontend with reusable components.
+- Creating a Spring Boot API with endpoints for user and transaction data.
+- Managing local environment setup with separate ports for client (3000) and server (8080).
+- Preparing the system for integration with authentication and database persistence layers.
+
+***Architecture Overview***
+```
+my-react-springboot-app/
+├── client/          # React Frontend
+│   ├── src/
+│   │   ├── components/   # UI Components
+│   │   ├── pages/        # Page Views
+│   │   └── services/     # API calls
+│   └── package.json
+└── server/          # Spring Boot Backend
+    ├── src/main/java/com/example/
+    │   ├── controller/   # REST Controllers
+    │   ├── model/        # Entities
+    │   └── service/      # Business Logic
+    └── pom.xml
+
+```
+***Learning Objectives***
+
+This project is part of my ongoing effort to:
+
+- Strengthen my Java + Spring Boot backend skills.
+- Improve full-stack communication between React and Java services.
+- Explore authentication, error handling, and API best practices.
+- Prepare for database integration and deployment to the cloud.
+- Improve capabilities in created RESTful API and having them communicate with front-end services like React. 
+
+***Next Steps***
+
+- Implement Spring Security for authentication
+- Connect to MySQL for persistent data storage
+- Add frontend transaction tracking dashboard
+- Deploy the application using Docker or Render
+
+***Outcome (So Far)***
+
+Even at its early stage, the Bank Web App demonstrates a working React frontend communicating with a Spring Boot backend, proving my ability to integrate two different frameworks into one consistent stack — a key full-stack developer skill.
+
+***Links***
+
+- Repository: [Bank Web App (React + Spring Boot)](https://github.com/Court247/BankWebApp)
+- Tech Stack: React · Spring Boot · TypeScript · Java
+- Status: 🚧 In Development
 
 ### 🌟 TopTier
 
@@ -253,7 +337,6 @@ The project demonstrated my ability to work in a multi-disciplinary cybersecurit
 - ***Date:*** November 2023
 - ***Link:*** [Lightweight Intrusion Detection System (Private Repo)](https://github.com/ChristianAlbertoGomez/CS4311_LIDS_4CodOfDuty_Fall2023)
 
-### [Flavor App](https://github.com/cmalcazar/FlavorApp)
 
 ## 🧰 Skills & Tools
 ***Languages***
@@ -328,11 +411,13 @@ The project demonstrated my ability to work in a multi-disciplinary cybersecurit
 
 ## About Me
 
-I am a full stack software engineer. Recently graduated with my degree in Computer Science and a minor in math from the University of Texas at El Paso. I enjoy playing video games on my downtime or thinking up real world projects to work on.
+I’m a Full-Stack Software Engineer with a B.S. in Computer Science and a minor in Mathematics from the University of Texas at El Paso.
+I’m passionate about designing and building scalable web and mobile applications, with a strong focus on backend architecture, API development, and full-stack integration.
 
-I'm passionate about creating scalable web apps and mobile applications. 
+I enjoy solving real-world problems through code, collaborating with others to bring ideas to life, and continuously learning new technologies.
+When I’m not coding, you can usually find me gaming 🎮 or brainstorming my next project idea.
 
 ## Connect with me
-- [💼 LinkedIn](https://linkedin.com/in/yourprofile)  
-- [📧 Email](mailto:youremail@example.com)  
-- [🌐 Portfolio (coming soon)](https://yourusername.github.io)
+- [💼 LinkedIn](https://www.linkedin.com/in/courtney-woods-1a1b5883/)  
+- [📧 Email](mailto:courtney.woodsjobs@gmail.com)  
+- [🌐 Portfolio (coming soon)](https://courtneywoods.me)
