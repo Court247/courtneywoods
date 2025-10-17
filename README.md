@@ -23,7 +23,7 @@ Full stack developer passionate about art, gaming, design, and scalable applicat
 
 ArtBook is a full-stack social media application designed to give artists a space to share their work, connect with others, and build creative communities. Built as a monorepo, it integrates web, mobile, and backend services into one cohesive ecosystem.
 
-***🧠 Key Features***
+***Key Features***
 
 - User-generated content — artists can upload, caption, and share artwork.
 
@@ -37,7 +37,7 @@ ArtBook is a full-stack social media application designed to give artists a spac
 
 - Cross-platform — single backend serving React (web) and Flutter (mobile) apps.
 
-***🧩Tech Stack***
+***Tech Stack***
 | Layer              | Technology                       |
 | ------------------ | -------------------------------- |
 | **Backend**        | FastAPI (Python)                 |
@@ -46,7 +46,7 @@ ArtBook is a full-stack social media application designed to give artists a spac
 | **Database**       | MySQL (SQLAlchemy ORM)           |
 | **Auth & Media**   | Firebase Auth & Firebase Storage |
 
-***⚙️ Architecture & Approach***
+***Architecture & Approach***
 
 ArtBook is structured as a monorepo to maintain consistency and shared logic across platforms.
 
@@ -58,7 +58,7 @@ ArtBook is structured as a monorepo to maintain consistency and shared logic acr
 
 - Database Layer (MySQL) — Normalized schema ensuring efficient relations between posts, users, comments, and notifications.
 
-***🧪 My Role & Challenges***
+***My Role & Challenges***
 
 I designed and implemented both the API layer and database schema, connecting the authentication and media layers through Firebase.
 
@@ -80,7 +80,7 @@ I designed and implemented both the API layer and database schema, connecting th
 
 - Structured and optimized relational schemas for core entities (users, comments, reposts, likes, etc.), maintaining consistent data relationships and enabling reliable communication between backend services and frontend components.
 
-***💡 Outcome***
+***Outcome***
 
 ArtBook demonstrates a production-style full-stack workflow: authentication, API design, data modeling, media handling, and cross-platform delivery.
 
@@ -89,7 +89,7 @@ It serves as both a technical case study and a real-world example of scalable ap
 Plus it was alot of fun. 😉
 
 
-***🔗 Links***
+***Links***
 
 Repository: [ArtBook GitHub](https://github.com/Court247/ArtBook)
 
@@ -189,7 +189,7 @@ Even at its early stage, the Bank Web App demonstrates a working React frontend 
 TopTier is a mobile app built with Flutter that helps users explore and compare character rankings and gear setups from popular gacha-style RPGs.
 Originally developed as a practice project, it evolved into a well-structured reference tool integrating curated data and Firestore-backed content.
 
-***✨ Core Features***
+***Core Features***
 - Character Browser — view hero rankings and key stats.
 - Gear Recommendations — quick reference for optimal builds.
 - Favorites System — mark and track preferred characters.
@@ -197,7 +197,7 @@ Originally developed as a practice project, it evolved into a well-structured re
 - Modular Widgets — cleanly separated UI components and providers.
 
 
-***🧰 Tech Stack***
+***Tech Stack***
 
 | Category             | Tools                         |
 | -------------------- | ----------------------------- |
@@ -207,7 +207,7 @@ Originally developed as a practice project, it evolved into a well-structured re
 | **Platform**         | Android (emulator + physical) |
 
 
-***🧠 What I Built & Learned***
+***What I Built & Learned***
 
 TopTier was designed to help me deepen my understanding of state management, modular UI design, and real-world app structure in Flutter.
 
@@ -223,7 +223,7 @@ I implemented:
 
 Through this project, I learned how to structure production-style Flutter apps, manage multiple environments, and prototype fast with Firebase integrations.
 
-***🧭 Challenges & Takeaways***
+***Challenges & Takeaways***
 
 - Managing Firestore security rules without exposing data publicly.
 
@@ -235,23 +235,22 @@ Through this project, I learned how to structure production-style Flutter apps, 
 
 TopTier taught me how to write and the importance of clean, modular Flutter code, and how to think about scalability even in small, experimental apps.
 
-***📱 Visual Preview***
+***Visual Preview***
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/ede20d23-9ab4-4e87-ba4c-5d427e208f97" width="200" height="355" alt="TopTier Screenshot 1" /> <img src="https://github.com/user-attachments/assets/e013f100-07d6-4cfc-821b-a491e8e4330d" width="200" height="355" alt="TopTier Screenshot 2" /> <img src="https://github.com/user-attachments/assets/554f46fa-1ab7-41f4-b166-fe76fe1d6e67" width="200" height="355" alt="TopTier Screenshot 3" /> </p>
 
-***🚀 Outcome***
+***Outcome***
 
 TopTier serves as a hands-on example of Flutter app design, data handling, and integration with Firebase.
 It’s an ongoing experiment that combines UI design, data modeling, and mobile performance optimization — a key part of my growth in mobile development.
 
-***🔗 Links***
+***Links***
 
 Repository: [TopTier GitHub](https://github.com/Court247/TopTier2)
 
 Contact: courtney.woodsjobs@gmail.com
 
 ### 🛡️ Lightweight Intrusion Detection System
-
 ***Overview:***
 
 The Lightweight Intrusion Detection System (LIDS) was developed for the DEVCOM Analysis Center (DAC) to assist cyber analysts in performing Cyber Vulnerability Assessments (CVAs).
